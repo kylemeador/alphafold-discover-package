@@ -67,6 +67,11 @@ version = {attr = "alphafold.version.__version__"}
 [tool.setuptools]
 py-modules = ["run_alphafold"]
 
+# Add this section to find the alphafold/ directory
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["alphafold*"]
+
 [tool.pyink]
 line-length = 80
 unstable = true
